@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <form id="signupForm">
+        <label for="signupName">Name:</label>
+        <input type="text" id="signupName" required><br>
+
+        <label for="signupEmail">Email:</label>
+        <input type="email" id="signupEmail" required><br>
+
+        <label for="signupAge">Age:</label>
+        <input type="number" id="signupAge" required><br>
+
+        <label for="signupGender">Gender:</label>
+        <select id="signupGender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Other">Other</option>
+        </select><br>
+
+        <label for="signupEducation">Education:</label>
+        <input type="text" id="signupEducation" required><br>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <h2>Login</h2>
+    <form id="loginForm">
+        <label for="loginEmail">Email:</label>
+        <input type="email" id="loginEmail" required><br>
+
+        <button type="submit">Login</button>
+    </form>
+
+    <script>
+        // ✅ Sign Up Function
+        document.getElementById("signupForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const user = {
+                name: document.getElementById("signupName").value,
+                email: document.getElementById("signupEmail").value,
+                age: document.getElementById("signupAge").value,
+                gender: document.getElementById("signupGender").value,
+                education: document.getElementById("signupEducation").value
+            };
+
+            fetch("http://localhost:3000/api/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.user) {
+                    localStorage.setItem("email", user.email);
+                    window.location.href = "landing.html"; 
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+
+        // ✅ Login Function
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const email = document.getElementById("loginEmail").value;
+
+            fetch("http://localhost:3000/api/login", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ email })
+            })
+            .then(response => response.json())
+            .then(data => {
+                alert(data.message);
+                if (data.user) {
+                    localStorage.setItem("email", email);
+                    window.location.href = "landing.html"; 
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    </script>
+</body>
+</html>
