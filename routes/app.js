@@ -16,5 +16,5 @@ console.log('This is for Node.js');
 // }, 5000);
 
 // clearTimeout(timeoutId); // Cancels the timeout before execution
-var logger=require('./logger');
+var logger=require('../logger');
 console.log(logger);

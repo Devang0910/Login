@@ -1,0 +1,39 @@
+document.addEventListener("DOMContentLoaded", function () {
+    console.log("Script loaded"); // ✅ Debugging log
+
+    // ✅ Signup event listener
+    const signupForm = document.getElementById("signupForm");
+    if (signupForm) {
+        signupForm.addEventListener("submit", function (event) {
+            event.preventDefault();
+            console.log("Signup button clicked"); // ✅ Check if triggered
+
+            const user = {
+                name: document.getElementById("signupName").value,
+                email: document.getElementById("signupEmail").value,
+                age: document.getElementById("signupAge").value,
+                gender: document.getElementById("signupGender").value,
+                education: document.getElementById("signupEducation").value
+            };
+
+            fetch("http://localhost:3000/api/signup", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify(user)
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log("Signup response:", data); // ✅ Check response
+                alert(data.message);
+                if (data.success) {
+                    // ✅ Store email in local storage
+                    localStorage.setItem("email", user.email);
+                    
+                    // ✅ Redirect user to index1.html with email parameter
+                    window.location.href = `/index1.html?email=${encodeURIComponent(user.email)}`;
+                }
+            })
+            .catch(error => console.error("Error:", error));
+        });
+    }
+});

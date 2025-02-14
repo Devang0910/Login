@@ -23,7 +23,144 @@
       "age": "3",
       "gender": "Male",
       "education": "21"
+    },
+    {
+      "id": 4,
+      "name": "dev",
+      "email": "devqwq@gmail.com",
+      "age": "21",
+      "gender": "Male",
+      "education": "Btech"
+    },
+    {
+      "id": 5,
+      "name": "dev",
+      "email": "dev321@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "education": "APSSS"
+    },
+    {
+      "id": 6,
+      "name": "dev",
+      "email": "dev3232@gmail.com",
+      "age": "32",
+      "gender": "Male",
+      "education": "32"
+    },
+    {
+      "id": 7,
+      "name": "Divya ",
+      "email": "Mestry@divya.com",
+      "age": "32",
+      "gender": "Female",
+      "education": "BDS"
+    },
+    {
+      "id": 8,
+      "name": "vidhi",
+      "email": "vi@d",
+      "age": "21",
+      "gender": "Male",
+      "education": "e"
+    },
+    {
+      "id": 9,
+      "name": "1",
+      "email": "de3231v@gmail.com",
+      "age": "12",
+      "gender": "Other",
+      "education": "21"
+    },
+    {
+      "id": 10,
+      "name": "nish1",
+      "email": "n@gmail.com",
+      "age": "3",
+      "gender": "Female",
+      "education": "12"
+    },
+    {
+      "id": 11,
+      "name": "3",
+      "email": "w2@21",
+      "age": "2",
+      "gender": "3",
+      "education": "Btech"
+    },
+    {
+      "id": 12,
+      "name": "siddhi",
+      "email": "ew@gmail.com",
+      "age": "32",
+      "gender": "Female",
+      "education": "de"
+    },
+    {
+      "id": 13,
+      "name": "dev",
+      "email": "dev2fd1@gmail.com",
+      "age": "23",
+      "gender": "male",
+      "education": "Btech"
+    },
+    {
+      "id": 14,
+      "name": "dev",
+      "email": "devef@gmail.com",
+      "age": "21",
+      "gender": "male",
+      "education": "MS "
+    },
+    {
+      "id": 15,
+      "name": "oranjal",
+      "email": "peanjal@gmail.com",
+      "age": "323",
+      "gender": "male",
+      "education": "we3"
     }
   ],
-  "loggedInUsers": []
+  "loggedInUsers": [
+    {
+      "id": 9,
+      "name": "1",
+      "email": "de3231v@gmail.com",
+      "age": "12",
+      "gender": "Other",
+      "education": "21"
+    },
+    {
+      "id": 5,
+      "name": "dev",
+      "email": "dev321@gmail.com",
+      "age": "23",
+      "gender": "Female",
+      "education": "APSSS"
+    },
+    {
+      "id": 11,
+      "name": "3",
+      "email": "w2@21",
+      "age": "2",
+      "gender": "3",
+      "education": "Btech"
+    },
+    {
+      "id": 13,
+      "name": "dev",
+      "email": "dev2fd1@gmail.com",
+      "age": "23",
+      "gender": "male",
+      "education": "Btech"
+    },
+    {
+      "id": 15,
+      "name": "oranjal",
+      "email": "peanjal@gmail.com",
+      "age": "323",
+      "gender": "male",
+      "education": "we3"
+    }
+  ]
 }
